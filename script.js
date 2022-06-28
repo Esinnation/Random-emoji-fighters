@@ -5,7 +5,7 @@ const stageEl = document.getElementById("stage")
 const playerOne = document.getElementById("playerOne")
 const playerTwo= document.getElementById("playerTwo")
 const resetBtn = document.getElementById("reset-btn")
-let canRender=true
+let canRender=false
 
 
 
