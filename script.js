@@ -12,19 +12,20 @@ let canRender=true
 playerOne.addEventListener("click", function(){
     const randomIndexOne = Math.floor(Math.random() * fighters.length)
     stageEl.textContent = `${fighters[randomIndexOne]} vs  `
-
+    canRender=true
+    playerTwo.addEventListener("click", function() {
+        const randomIndexTwo = Math.floor(Math.random() * fighters.length)
+        if(canRender===true ){
+            stageEl.textContent += `  ${fighters[randomIndexTwo]} ` 
+            canRender=false
+        } 
+    })
 })
 
 
-playerTwo.addEventListener("click", function() {
-    const randomIndexTwo = Math.floor(Math.random() * fighters.length)
-    if(canRender===true){
-        stageEl.textContent += `  ${fighters[randomIndexTwo]} ` 
-        canRender=false
-    } 
-})
+
 resetBtn.addEventListener("click",function(){
     stageEl.textContent = 'Please select fighters '
-    canRender=true
+    canRender=false
     
 })
