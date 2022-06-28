@@ -14,6 +14,9 @@ body {
 
 }
 
+
+
+
 .container{
     /* border: 1px solid red;   */
     margin: 5vw;
@@ -58,8 +61,4 @@ button {
     background: white;
     color: #e98a1d;
     border: 1px solid rgb(186, 238, 0);
-}
-#reset-btn{
-    margin-bottom: 2px;
-    margin-top: 5px;
 }

@@ -5,6 +5,7 @@ const stageEl = document.getElementById("stage")
 const playerOne = document.getElementById("playerOne")
 const playerTwo= document.getElementById("playerTwo")
 const resetBtn = document.getElementById("reset-btn")
+let canRender=true
 
 
 
@@ -14,20 +15,16 @@ playerOne.addEventListener("click", function(){
 
 })
 
+
 playerTwo.addEventListener("click", function() {
     const randomIndexTwo = Math.floor(Math.random() * fighters.length)
-        stageEl.textContent += `  ${fighters[randomIndexTwo]}   `
-    
+    if(canRender===true){
+        stageEl.textContent += `  ${fighters[randomIndexTwo]} ` 
+        canRender=false
+    } 
 })
 resetBtn.addEventListener("click",function(){
     stageEl.textContent = 'Please select fighters '
+    canRender=true
     
 })
-
-
-
-
-
-
-
-// const randomIndexTwo = Math.floor(Math.random() * fighters.length)fighters[randomIndexTwo]
